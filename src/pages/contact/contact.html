@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="light">A</ion-item-divider>
+
+      <ion-item *ngFor="let contact of contacts" (click)="itemShow(contact)">
+        <ion-avatar item-start>
+          <img src="/images/avatar.jpg">
+        </ion-avatar>
+        <h2>{{contact.name}}</h2>
+        <p>{{contact.sign}}</p>
+      </ion-item>
+     
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">B</ion-item-divider>
+      
+      <ion-item *ngFor="let contact of contacts" (click)="itemShow(event, contact)">
+        <ion-avatar item-start>
+          <img src="/images/avatar.jpg">
+        </ion-avatar>
+        <h2>{{contact.name}}</h2>
+        <p>{{contact.sign}}</p>
+      </ion-item>
+      
+    </ion-item-group>
+  </ion-list>
+</ion-content>

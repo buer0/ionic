@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+		<ion-item>
+			<ion-label floating>用户名</ion-label>
+			<ion-input type="text" [(ngModel)]="username"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>密码</ion-label>
+			<ion-input type="password" [(ngModel)]="password"></ion-input>
+		</ion-item>
+	</ion-list>
+	<button ion-button block (click)="showFill()">登录</button>
+	<ion-row>
+		<ion-col id="colRight">
+		<div class="AlignRight">
+			<button ion-button outline small (click)="openRegisterForm()">还没有账号？注册</button>
+		</div>
+		</ion-col>
+	</ion-row>
+
+</ion-content>
