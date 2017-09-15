@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController, ModalController} from 'ionic-angular';
 import { Register } from './subPages/register';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 @Component({
   selector: 'page-login',
@@ -13,7 +14,8 @@ export class HomePage {
   	public navCtrl: NavController,
   	public LoadingCtrl: LoadingController,
   	private ToastCtrl: ToastController,
-  	public modalCtrl: ModalController) {
+  	public modalCtrl: ModalController,
+    private nativeStorage: NativeStorage) {
 
   	this.username = '';
   	this.password = '';
